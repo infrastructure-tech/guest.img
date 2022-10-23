@@ -3,7 +3,6 @@
   "build_in": "img",
   "next": [
     {
-      "build_in": "guest",
       "build": "docker",
       "build_in" : "docker",
       "config" : {
