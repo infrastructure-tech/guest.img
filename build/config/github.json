@@ -19,7 +19,7 @@
             "build" : "docker_publish",
             "build_in" : "./",
             "config" : {
-              "image_name": "eons/img_guest"
+              "image_name": "eons/guest.img"
             }
           }
         ]

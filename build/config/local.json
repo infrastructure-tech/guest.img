@@ -6,12 +6,12 @@
       "build": "docker",
       "build_in" : "docker",
       "config" : {
-        "base_image" : "eons/img_base",
+        "base_image" : "eons/base.img",
         "combine": [
-          "eons/img_network-enabled:latest",
-          "eons/img_storage-enabled:latest"
+          "eons/network.enabled.img:latest",
+          "eons/storage.enabled.img:latest"
         ],
-        "image_name" : "eons/img_guest",
+        "image_name" : "eons/guest.img",
         "image_os" : "alpine",
         "tags" : [
           "latest"
