@@ -1,0 +1,21 @@
+clear_build_path: true
+build_in: img
+next:
+  - build: docker
+    build_in: docker
+    config:
+      base_image: eons/base.img
+      combine:
+        - eons/network.enabled.img:latest
+        - eons/storage.enabled.img:latest
+      image_name: eons/guest.img
+      image_os: alpine
+      tags:
+        - latest
+      next:
+        - run_when_any:
+            - release
+          build: docker_publish
+          build_in: ./
+          config:
+            image_name: eons/guest.img
